@@ -1,0 +1,42 @@
+{
+  "name": "chriswill88.github.io",
+  "version": "1.0.0",
+  "description": "portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode=development --open --hot",
+    "build": "webpack --mode=production",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chriswill88/chriswill88.github.io.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Christian Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chriswill88/chriswill88.github.io/issues"
+  },
+  "homepage": "https://github.com/chriswill88/chriswill88.github.io#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "gh-pages": "^5.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

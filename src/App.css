@@ -11,42 +11,42 @@
 
 @font-face {
   font-family: "abka";
-  src: url("assets/fonts/ABKAD DEMO/ABKADDEMO-PERSONALLICENSE.otf");
+  src: url("./assets/fonts/ABKAD DEMO/ABKADDEMO-PERSONALLICENSE.otf");
 }
 
 @font-face {
   font-family: "behence";
-  src: url("assets/fonts/behance-667c356f4c847/RuskaDisplay-Regular.otf");
+  src: url("./assets/fonts/behance-667c356f4c847/RuskaDisplay-Regular.otf");
 }
 
 @font-face {
   font-family: "feogra";
-  src: url("assets/fonts/Feogra - Demo/Feogra-Demo.otf");
+  src: url("./assets/fonts/Feogra - Demo/Feogra-Demo.otf");
 }
 
 @font-face {
   font-family: "heraka";
-  src: url("assets/fonts/Heraka/Heraka-PersonalUse.otf");
+  src: url("./assets/fonts/Heraka/Heraka-PersonalUse.otf");
 }
 
 @font-face {
   font-family: "lemonglory";
-  src: url("assets/fonts/lemonglory Personal Use/Lemonglory-PersonalUse.otf");
+  src: url("./assets/fonts/lemonglory Personal Use/Lemonglory-PersonalUse.otf");
 }
 
 @font-face {
   font-family: "lt-sarif";
-  src: url("assets/fonts/LTSerif Demo/LT. Serif Demo.otf");
+  src: url("./assets/fonts/LTSerif Demo/LT. Serif Demo.otf");
 }
 
 @font-face {
   font-family: "necosmic";
-  src: url("assets/fonts/Necosmic Free/Necosmic-PersonalUse.otf");
+  src: url("./assets/fonts/Necosmic Free/Necosmic-PersonalUse.otf");
 }
 
 @font-face {
   font-family: "think";
-  src: url("src/assets/fonts/Think-Sans-Serif-Typeface/Think.otf");
+  src: url("./assets/fonts/Think-Sans-Serif-Typeface/Think.otf");
 }
 
 .app {

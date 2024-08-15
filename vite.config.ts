@@ -10,5 +10,6 @@ export default defineConfig({
         app: './index.html'
       }
     }
-  }
+  },
+  base: '/portfolio',
 })

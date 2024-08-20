@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Clock from 'react-clock';
 
 export default function Widget() {
     const [cardInd, setCardInd] = useState(0);
     const [today, setDate] = useState(new Date())
+    const secondsRef = useRef(0);
     
 
     const locale = 'en';
@@ -11,6 +12,11 @@ export default function Widget() {
     useEffect(() => {
         const timer = setInterval(() => { 
             setDate(new Date());
+            if (!(secondsRef.current % 5)) {
+                setCardInd(cardInd ? 0 : 1)
+                secondsRef.current = 0;
+            }
+            secondsRef.current += 1;
         }, 1000);
         
         return () => {

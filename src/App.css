@@ -77,7 +77,7 @@
   height: max-content;
 
   padding: 80px;
-  background-color: rgba(255, 255, 255, 0.967);
+  background-color: rgba(255, 255, 255, 0.562);
 
   border-radius: 15px;
   
@@ -151,7 +151,7 @@ h3 {
 }
 
 .side-contents {
-  backdrop-filter: blur(1000px);
+  backdrop-filter: blur(100px);
 
   filter: invert();
   background-color: rgba(48, 48, 48, 0.268);
@@ -326,6 +326,9 @@ h3 {
     max-width: 300px;
     padding: 30px;
     transition: all 2s;
+
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
   }
 
   .name {
@@ -355,6 +358,7 @@ h3 {
   }
 
   .side-contents {
+    filter: none;
     max-width: 100px;
     min-width: 100px;
     height: 130px;

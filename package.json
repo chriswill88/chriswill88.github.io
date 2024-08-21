@@ -1,5 +1,5 @@
 {
-  "homepage": "http://chriswill88.github.io/",
+  "homepage": "https://chriswill88.github.io/",
   "name": "simple-portfolio",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "@tsparticles/all": "^3.5.0",

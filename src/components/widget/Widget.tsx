@@ -5,6 +5,7 @@ export default function Widget() {
     const [cardInd, setCardInd] = useState(0);
     const [today, setDate] = useState(new Date())
     const secondsRef = useRef(0);
+    const [onWidget, setOnWidget] = useState(false)
     
 
     const locale = 'en';
@@ -12,7 +13,7 @@ export default function Widget() {
     useEffect(() => {
         const timer = setInterval(() => { 
             setDate(new Date());
-            if (!(secondsRef.current % 5)) {
+            if (!(secondsRef.current % 5) && !onWidget) {
                 setCardInd(cardInd ? 0 : 1)
                 secondsRef.current = 0;
             }
@@ -33,7 +34,7 @@ export default function Widget() {
     const time = today.toLocaleTimeString(locale, { hour: 'numeric', hour12: true, minute: 'numeric', second: "2-digit"});
     
 
-    return <div className="side-contents">
+    return <div onMouseEnter={() => setOnWidget(true)} onMouseLeave={() => {setOnWidget(false)}} className="side-contents">
         {
             cardInd == 0 && <div className="card day">
                 <p>{wish}</p>

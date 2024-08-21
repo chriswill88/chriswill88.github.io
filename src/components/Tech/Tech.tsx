@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import { technologiesMap } from "../../fixture/data"
 
 const getTechUrl = (name: string) => {

@@ -1,7 +1,7 @@
 import './App.css'
 import Home from './components/home/Home'
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container,
@@ -100,15 +100,17 @@ const App = () => {
 
   if (init) {
     return (
-      <div className="app">
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={options}
-          className=''
-        />
-        <Home />
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className="app">
+          <Particles
+            id="tsparticles"
+            particlesLoaded={particlesLoaded}
+            options={options}
+            className=''
+          />
+          <Home />
         </div>
+      </Suspense>
     );
   }
 

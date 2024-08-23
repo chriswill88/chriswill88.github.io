@@ -277,6 +277,7 @@ h3 {
 
 .tech-container {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -388,21 +389,21 @@ h3 {
 
 
   .project-card {
-    min-width: 220px;
+    min-width: 200px;
     font-size: 10px;
   }
 
-  .tech-img-container {
+  /* .tech-img-container {
     width: 20px;
     height: 20px;
   
     margin-right: 10px;
     margin-bottom: 10px;
-  }
+  } */
   
   .tech-img {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
   }
 
   .tech-name {

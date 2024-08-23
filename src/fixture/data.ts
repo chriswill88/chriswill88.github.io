@@ -32,7 +32,7 @@ const projectsData = [
         url: "https://chriswilliams.tech",
         github: "https://github.com/chriswill88/chriswill88.github.io",
         description: "Christian Williams Portfolio website used to showcase skills and projects.",
-        techNames: ["Vite", "CSS3", "Github Pages", "HTML5", "JavaScript", "NPM", "React", "Cloudflare", "NodeJS" ],
+        techNames: ["Vite", "Github Pages", "HTML5", "JavaScript", "NPM", "React", "Cloudflare", "NodeJS", "CSS3" ],
         pictures: []
     },
     {
@@ -40,7 +40,7 @@ const projectsData = [
         url: "https://rocket-riders-git-master-chriswill88.vercel.app/",
         github: "https://github.com/chriswill88/RocketRiders",
         description: "This game was created using Phaser 3, a javascript game making framework.",
-        techNames: ["After Effects", "AWS", "Babel", "CSS3", "JavaScript", "Flask", "Github", "HTML5", "Lottie", "Nginx", "NPM", "Parcel", "Phaser3", "Python", "React", "Slack", "Trello", "Vercel", "NodeJS"],
+        techNames: ["AWS", "React", "JavaScript", "Flask", "Nginx", "Phaser3", "NodeJS", "After Effects", "Babel", "CSS3", "HTML5", "Lottie", "NPM", "Parcel", "Python", "Slack", "Trello", "Vercel"],
         pictures: []
     },
     {
@@ -48,7 +48,7 @@ const projectsData = [
         url: null,
         github: "https://github.com/chriswill88/chatapp/",
         description: "A simple chatroom app to learn socket io",
-        techNames: [ "Express JS", "Socket.io", "Vite", "CSS3", "JavaScript", "Github Pages", "HTML5", "NPM", "React", "NodeJS" ],
+        techNames: [ "Express JS", "Socket.io", "Vite", "React", "NodeJS", "CSS3", "JavaScript", "Github Pages", "HTML5", "Github", "NPM" ],
         pictures: []
     },
 

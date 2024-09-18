@@ -1,4 +1,4 @@
-import './App.css'
+import './app.css'
 import Home from './components/home/Home'
 
 import { Suspense, useEffect, useMemo, useState } from "react";
@@ -10,6 +10,8 @@ import {
   OutMode,
 } from "@tsparticles/engine";
 import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
+import Sidebar from './components/sidebar/Sidebar';
+import { AppContextProvider, useAppContext } from './context/AppContext';
 // import { loadFull } from "tsparticals/"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 // import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
@@ -100,22 +102,29 @@ const App = () => {
 
   if (init) {
     return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <div className="app">
-          <Particles
-            id="tsparticles"
-            particlesLoaded={particlesLoaded}
-            options={options}
-            className=''
-          />
-          <Home />
-        </div>
-      </Suspense>
+      <AppContextProvider>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="app">
+            <Particles
+              id="tsparticles"
+              particlesLoaded={particlesLoaded}
+              options={options}
+              className=''
+            />
+            <Sidebar />
+            {
+            <Home />
+            }
+          </div>
+        </Suspense>
+      </AppContextProvider>
     );
   }
 
   return <>
-      <Home />
+    <AppContextProvider>
+      <Sidebar />
+    </AppContextProvider>
     </>;
 };
 

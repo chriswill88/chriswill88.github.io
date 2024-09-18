@@ -62,21 +62,141 @@
   width: 100%;
   height: 100%;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  display: flex;
+}
+/* intro */
+.intro {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.437);
+  overflow: hidden;
+
+
+  backdrop-filter: blur(80px) ;
+  -webkit-backdrop-filter: blur(80px);
+
+  color: rgb(255, 255, 255);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 2s;
+
+}
+
+/* Sidebar */
+.sidebar-container {
+
+  min-width: 300px;
+  height: 100vh;
+  margin-right: 25px;
+
+
+  background-color: rgba(0, 0, 0, 0.132);
+  overflow: hidden;
+
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  color: rgb(255, 255, 255);
 
   display: flex;
   justify-content: center;
 
+  transition: all 2s;
 
 }
 
-.home {
-  max-width: 700px;
-  width: max-content;
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  h1 {
+    padding: 0%;
+    margin-bottom: 0%;
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90px;
+
+    filter: drop-shadow(0px 0px 5px rgb(255, 255, 255));
+
+    /* &:hover {
+      filter: drop-shadow(0px 0px 10px rgb(255, 255, 255)) blur(3px);
+      transition: filter .5s;
+    } */
+     animation: shining-light 4s linear infinite;
+  }
+}
+
+@keyframes shining-light {
+  0% {
+    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    transform: scale(.99);
+  }
+  50% {
+    filter: drop-shadow(0px 0px 8px rgb(255, 255, 255));
+    transform: scale(1.01);
+
+  }
+  100% {
+    filter: drop-shadow(0px 0px 2px rgb(255, 255, 255));
+    transform: scale(.99);
+
+  }
+}
+
+.title {
+  z-index: 1;
+  position: absolute;
+  left: 30px;
+
+}
+
+.inner-container {
+  width: 250px;;
+}
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.pro-image {
+  width: 206px;
   height: max-content;
 
-  padding: 80px;
+  border-radius: 0px 20px 20px 0px;
+}
+
+/* Home */
+
+.home-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: aliceblue;
+}
+
+.home {
+  height: 100vh;
+
+  display: flex; 
+
+  justify-content: space-around;
+  align-items: center;
+
+  height: min-content;
+  
   background-color: rgba(255, 255, 255, 0.562);
 
   border-radius: 15px;
@@ -84,29 +204,20 @@
   border-style: none;
   box-shadow: none;
 
+
+
   /* special */
   background-clip: text;
   -webkit-background-clip: text;
-  backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(80px);
+  backdrop-filter: blur(80px) ;
+  -webkit-backdrop-filter: blur(80px) ;
   
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 
   /* mix-blend-mode: difference; */
-  filter: invert();
-  -webkit-filter: invert();
-
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between;
-
+  /* filter: invert();
+  -webkit-filter: invert(); */
   transition: all 2s;
-}
-
-.head {
-  display: flex;  
-  justify-content: space-between;
-  margin-bottom: 20px;;
 }
 
 .name {
@@ -119,25 +230,10 @@
 }
 
 .bio {
-  max-width: 500px;
-  transition: all 2s;
+  padding-left: 50px;
+  padding-right: 50px;
 
-}
-
-.bio p {
-  font-size: 19px;
-  font-weight: bolder;
-  margin-bottom: 0px;
-  transition: all 2s;
-
-}
-
-h3 {
-  font-family: 'lemonglory';
-  font-size: 50px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  transition: all 2s;
+  font-size: 20px;
 
 }
 
@@ -145,7 +241,7 @@ h3 {
   font-size: 20px;
   display: flex;
 
-  width: 100%;
+  width: max-content;
   height: min-content;
 
 }
@@ -321,7 +417,6 @@ h3 {
 
 @media only screen and (max-width: 800px) {
   .app {
-    margin: 20px;
   }
   .home {
     max-width: 300px;
@@ -339,10 +434,6 @@ h3 {
   }
   .bio {
     width: 190px;
-    transition: all 2s;
-  }
-
-  .bio p{
     font-size: 12px;
     transition: all 2s;
   }
@@ -409,4 +500,34 @@ h3 {
   .tech-name {
     font-size: 10px;
   }
+}
+
+
+
+/* circle svg */
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.circle-tag {
+  position: absolute;
+  top: 100px;
+  left: 715px;
+  animation: rotate 30s infinite linear;
+
+  filter: blur(20px);
+  transition: linear filter 1s;
+
+  &:hover {
+    transition: linear filter 1s;
+    filter: blur(0px);
+
+  }
+
 }

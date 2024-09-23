@@ -10,8 +10,10 @@ import {
   OutMode,
 } from "@tsparticles/engine";
 import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-import Sidebar from './components/sidebar/Sidebar';
-import { AppContextProvider, useAppContext } from './context/AppContext';
+import Sidebar, { SideBarPlaceHolder } from './components/sidebar/Sidebar';
+import { AppContextProvider } from './context/AppContext';
+import Skills from './components/skills/Skills';
+import MainWrapper from './components/main/MainWrapper';
 // import { loadFull } from "tsparticals/"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 // import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
@@ -19,6 +21,7 @@ import { AppContextProvider, useAppContext } from './context/AppContext';
 
 const App = () => {
   const [init, setInit] = useState(false);
+
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -37,7 +40,7 @@ const App = () => {
     () => ({
       background: {
         color: {
-          value: "#fc8080",
+          value: "#000000",
         },
       },
       fpsLimit: 120,
@@ -60,7 +63,7 @@ const App = () => {
       },
       particles: {
         color: {
-          value: "#80b2fc",
+          value: "#010230",
         },
         links: {
           color: "#80b2fc",
@@ -102,22 +105,30 @@ const App = () => {
 
   if (init) {
     return (
-      <AppContextProvider>
-        <Suspense fallback={<div>Loading...</div>}>
-          <div className="app">
-            <Particles
-              id="tsparticles"
-              particlesLoaded={particlesLoaded}
-              options={options}
-              className=''
-            />
-            <Sidebar />
-            {
-            <Home />
-            }
-          </div>
-        </Suspense>
-      </AppContextProvider>
+      <Suspense fallback={<div>Loading...</div>}>
+
+        <AppContextProvider>
+            <div className="app">
+              <Particles
+                id="tsparticles"
+                particlesLoaded={particlesLoaded}
+                options={options}
+                className=''
+              />
+              <Sidebar />
+              <SideBarPlaceHolder />
+              {
+                
+              <MainWrapper>
+                <Home />
+                <Skills />
+
+              </MainWrapper>
+              }
+            </div>
+        </AppContextProvider>
+      </Suspense>
+
     );
   }
 

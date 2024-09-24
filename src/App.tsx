@@ -14,6 +14,7 @@ import Sidebar, { SideBarPlaceHolder } from './components/sidebar/Sidebar';
 import { AppContextProvider } from './context/AppContext';
 import Skills from './components/skills/Skills';
 import MainWrapper from './components/main/MainWrapper';
+import Experience from './components/experience/Experience';
 // import { loadFull } from "tsparticals/"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 // import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
@@ -121,6 +122,7 @@ const App = () => {
                 
               <MainWrapper>
                 <Home />
+                <Experience />
                 <Skills />
 
               </MainWrapper>

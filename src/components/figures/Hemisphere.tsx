@@ -7,9 +7,7 @@ const Hemisphere = ({ children }: any) => {
         </figure>
   
         <div className="orbit-container">
-            
             <figure className="planet"></figure>
-
         </div>
         <figure className="sphere">
             <figure className="light"></figure>

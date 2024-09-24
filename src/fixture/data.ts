@@ -57,100 +57,152 @@ const projectsData = [
 const technologiesMap = [
     {
         name: "After Effects",
+        type: "create",
         url: ae
     },
     {
         name: "AWS",
+        type: "other",
         url: aws
     },
     {
         name: "Babel",
+        type: "bundler",
         url: babel
     },
     {
         name: "CSS3",
+        type: "lang",
         url: css
     },
     {
         name: "Flask",
+        type: "framework",
         url: flask
     },
     {
-        name: "Github",
+        name: "Git & Github",
+        type: "tool",
         url: github
     },
     {
         name: "HTML5",
+        type: "lang",
         url: html
     },
     {
         name: "JavaScript",
+        type: "lang",
         url: js
     },
     {
         name: "Lottie",
+        type: "tool",
         url: lottie
     },
     {
         name: "Nginx",
+        type: "backend",
         url: nginx
     },
-    {
-        name: "NPM",
-        url: npm
-    },
+    // {
+    //     name: "NPM",
+    //     type: "Tool",
+    //     url: npm
+    // },
     {
         name: "Parcel",
+        type: "bundler",
         url: parcel
     },
     {
         name: "Phaser3",
+        type: "framework",
         url: phaser
     },
     {
         name: "Python",
+        type: "lang",
         url: python
     },
     {
         name: "React",
+        type: "Framework",
         url: react
     },
     {
         name: "Slack",
+        type: "tool",
         url: slack
     },
     {
         name: "Trello",
+        type: "tool",
         url: trello
     },
     {
         name: "Vite",
+        type: "tool",
         url: vite
     },
     {
         name: "Socket.io",
+        type: "framework",
         url: socketIO
     },
     {
         name: "Github Pages",
+        type: "tool",
         url: ghPages
     },
     {
         name: "Cloudflare",
+        type: "tool",
         url: cloudflare
     },
     {
         name: "Vercel",
+        type: "tool",
         url: vercel
     },
     {
         name: "NodeJS",
+        type: "frameworks",
         url: nodejs
     },
     {
         name: "Express JS",
+        type: "Back",
         url: express
     },
+    {
+        name: "C",
+        type: "lang",
+    },
+    {
+        name: "SQL",
+        type: "lang",
+    },
+    {
+        name: "TypeScript",
+        type: "lang",
+    },
+    {
+        name: "Ember JS",
+        type: "Framework",
+    },
+    {
+        name: "Java",
+        type: "lang",
+    },
+    {
+        name: "Java",
+        type: "lang",
+    },
+    {
+        name: "Java",
+        type: "lang",
+    }
 ]
 
 

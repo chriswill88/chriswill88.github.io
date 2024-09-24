@@ -1,4 +1,7 @@
 
+const getSkills = (subject: string) => {
+    
+}
 
 const Skills = () => {
     return <div className="skills-container">

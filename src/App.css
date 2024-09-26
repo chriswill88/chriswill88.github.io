@@ -126,6 +126,7 @@
   display: block;
   width: max-content;
   color: white;
+  font-variant-emoji: text;
 }
 
 .tech-list {

@@ -1,35 +1,27 @@
-import Projects from "../projects/Projects";
-import Widget from "../widget/Widget";
-import 'react-clock/dist/Clock.css';
-import pdf from '../../assets/online-resume.pdf'
-
+import { useAppContext } from '../../context/AppContext';
+import Stars from '../figures/Stars';
 
 export default function Home() {
+    const { appState } = useAppContext();
+
     return <div className="home">
-        <div className="head">
-            <div className="bio">
-                <h1 className="name">Christian Williams</h1>
+            <div className="bio see-able">
+                <p>Hello!  <span className='wave-emoji'>👋</span></p>
                 <p>
-                    Hey! I'm a full stack software engineer. 
-                    I enjoy working on projects of all sorts, with a vast variaty of coding languages and technologies.
+                    I'm Christian Williams, I've been learning coding for about 5 years, with 3 years of full stack experience.
+                    I enjoy working on projects of all sorts, with a variety of coding languages and technologies.
                 </p>
-                <p>My latest role was at Sony Playstation as a full stack software engineer.</p>
+                <p>
+                    In my free time - you can find me working on the projects I keep forgetting to push to github, trying new board games with friends, trying out different foods, or finding something fun to get into.
+                </p>
+
                 <p>I'm open for work!</p>
+                <p>Get in touch 🤝 <a className='mail' href='mailto:christian.williams77@outlook.com'>christian.williams77@outlook.com</a></p>
+                
             </div>
+            <div className={`title-container ${appState == 'main' && "main"} `}>
+                <Stars />
 
-            <Widget />
+            </div>      
         </div>
-        <Projects />
-
-        <div className="connect">
-            <h3>Lets Connect!</h3>
-            <div className="socials">
-                <a className="social-card" href="mailto::christian.willams77@outlook.com"><div>Email</div></a>
-                <a className="social-card" href="https://www.linkedin.com/in/christian--williams/"><div>LinkedIn</div></a>
-                <a className="social-card" href="https://x.com/ChrisWill79"><div>X</div></a>
-                <a className="social-card" href="https://github.com/chriswill88"><div>Github</div></a>
-                <a className="social-card" href={pdf} target="_blank"><div>Resume</div></a>
-            </div>
-        </div>
-    </div>
 }

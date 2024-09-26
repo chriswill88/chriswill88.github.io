@@ -224,13 +224,13 @@ div:after {
   position: absolute;
 
   
-  width: 700px;
-  height: 700px;
+  width: 30px;
+  height: 30px;
 
 
   perspective: 1000px;
   transform-style: preserve-3d;
-  z-index: 500;
+  z-index: -1;
 
   display: flex;
   justify-content: center;

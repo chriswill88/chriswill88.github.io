@@ -1,21 +1,21 @@
 import { useState } from "react";
-import Tech from "../Tech/Tech";
+import Tech from "../tech/Tech";
 
 export default function Project({project}: any) {
     const [showMore, setShowMore] = useState(false)
     return <div className="project-card">
-        <p>{project?.name}</p>
-        <p>{project?.description}</p>
+        <h3 id="name">{project?.name}</h3>
+        <p id="desc">{project?.description}</p>
         <div className="link-container">
-            <a href={project?.github}>Github Link</a>
+            {project?.github ? <a href={project?.github}>Github Link</a> : <p>Github not available!</p>}
+
             {project?.url ? <a href={project?.url}>Visit {project?.name}</a> : <p>Project not live yet!</p>}
         </div>
         
         <p>Technologies:</p>
         <div className="tech-container">
             {
-                project.techNames.map((techName: any, ind: number) => (ind < 8) ? <Tech key={ind} techName={techName} /> : showMore ? <Tech key={ind} techName={techName} /> : null
-                    )
+                project.techNames.map((techName: any, ind: number) => (ind < 7) ? <Tech key={ind} techName={techName} /> : showMore ? <Tech key={ind} techName={techName} /> : null)
             }
         </div>
         <div onClick={() => setShowMore((value) => !value)}>{!showMore ? "See All" : "show less"}</div>

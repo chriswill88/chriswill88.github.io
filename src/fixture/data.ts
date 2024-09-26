@@ -1,32 +1,39 @@
 
-import ae from "../assets/techimages/aftereffect.png";
-import aws from "../assets/techimages/aws.png";
-import babel from "../assets/techimages/babel.png";
-import css from "../assets/techimages/css3.png";
-import flask from "../assets/techimages/flask.png";
-import github from "../assets/techimages/github.png";
-import html from "../assets/techimages/html5.png";
-import js from "../assets/techimages/JavaScript.png";
-import lottie from "../assets/techimages/Lottie.png";
-import nginx from "../assets/techimages/nginx.png";
-import npm from "../assets/techimages/npm.png";
-import parcel from "../assets/techimages/parcel.png";
-import phaser from "../assets/techimages/phaserImage.png";
-import python from "../assets/techimages/python.png";
-import react from "../assets/techimages/react.png";
-import slack from "../assets/techimages/Slack.png";
-import trello from "../assets/techimages/trello.png";
-import cloudflare from "../assets/techimages/Cloudflare_Logo.png";
-import ghPages from "../assets/techimages/github-pages.png";
-import socketIO from "../assets/techimages/socketio.png";
-import vite from "../assets/techimages/vite.png";
-import vercel from "../assets/techimages/Vercel_logo.png";
-import nodejs from "../assets/techimages/nodejs.png"
-import express from "../assets/techimages/expressJS.png"
+// import ae from "../assets/techimages/aftereffect.png";
+// import aws from "../assets/techimages/aws.png";
+// import babel from "../assets/techimages/babel.png";
+// import css from "../assets/techimages/css3.png";
+// import flask from "../assets/techimages/flask.png";
+// import github from "../assets/techimages/github.png";
+// import html from "../assets/techimages/html5.png";
+// import js from "../assets/techimages/JavaScript.png";
+// import lottie from "../assets/techimages/Lottie.png";
+// import nginx from "../assets/techimages/nginx.png";
+// import npm from "../assets/techimages/npm.png";
+// import parcel from "../assets/techimages/parcel.png";
+// import phaser from "../assets/techimages/phaserImage.png";
+// import python from "../assets/techimages/python.png";
+// import react from "../assets/techimages/react.png";
+// import slack from "../assets/techimages/Slack.png";
+// import trello from "../assets/techimages/trello.png";
+// import cloudflare from "../assets/techimages/Cloudflare_Logo.png";
+// import ghPages from "../assets/techimages/github-pages.png";
+// import socketIO from "../assets/techimages/socketio.png";
+// import vite from "../assets/techimages/vite.png";
+// import vercel from "../assets/techimages/Vercel_logo.png";
+// import nodejs from "../assets/techimages/nodejs.png"
+// import express from "../assets/techimages/expressJS.png"
 
+interface project {
+    name: string,
+    url: null | string,
+    github?: null | string,
+    description: string,
+    techNames: string[],
+    pictures: string[]
+}
 
-
-const projectsData = [
+const projectsData: project[] = [
     {
         name: "Portfolio Website",
         url: "https://chriswilliams.tech",
@@ -51,129 +58,111 @@ const projectsData = [
         techNames: [ "Express JS", "Socket.io", "Vite", "React", "NodeJS", "CSS3", "JavaScript", "Github Pages", "HTML5", "Github", "NPM" ],
         pictures: []
     },
+    {
+        name: "Nature Fresh Bins Website",
+        url: null,
+        github: null,
+        description: "Buisness page for trash bin cleaning service",
+        techNames: ["Vercel", "V0", "Next JS", "Tailwind CSS", "NPM", "React", "NodeJS", "CSS3" ],
+        pictures: []
+    },
 
 ]
 
-const technologiesMap = [
+interface technology {
+    name: String,
+    type: "create" | "tool" | "framework" | "lang" | "other" | "back"
+}
+
+const technologiesMap: technology[] = [
     {
-        name: "After Effects",
+        name: "Photoshop",
         type: "create",
-        url: ae
+    },
+    {
+        name: "Premiere Pro",
+        type: "create"
+    },
+    {
+        name: "Figma",
+        type: "create"
     },
     {
         name: "AWS",
-        type: "other",
-        url: aws
-    },
-    {
-        name: "Babel",
-        type: "bundler",
-        url: babel
-    },
-    {
-        name: "CSS3",
-        type: "lang",
-        url: css
-    },
-    {
-        name: "Flask",
-        type: "framework",
-        url: flask
-    },
-    {
-        name: "Git & Github",
-        type: "tool",
-        url: github
-    },
-    {
-        name: "HTML5",
-        type: "lang",
-        url: html
-    },
-    {
-        name: "JavaScript",
-        type: "lang",
-        url: js
-    },
-    {
-        name: "Lottie",
-        type: "tool",
-        url: lottie
-    },
-    {
-        name: "Nginx",
-        type: "backend",
-        url: nginx
-    },
-    // {
-    //     name: "NPM",
-    //     type: "Tool",
-    //     url: npm
-    // },
-    {
-        name: "Parcel",
-        type: "bundler",
-        url: parcel
-    },
-    {
-        name: "Phaser3",
-        type: "framework",
-        url: phaser
-    },
-    {
-        name: "Python",
-        type: "lang",
-        url: python
-    },
-    {
-        name: "React",
-        type: "Framework",
-        url: react
-    },
-    {
-        name: "Slack",
-        type: "tool",
-        url: slack
-    },
-    {
-        name: "Trello",
-        type: "tool",
-        url: trello
-    },
-    {
-        name: "Vite",
-        type: "tool",
-        url: vite
-    },
-    {
-        name: "Socket.io",
-        type: "framework",
-        url: socketIO
-    },
-    {
-        name: "Github Pages",
-        type: "tool",
-        url: ghPages
-    },
-    {
-        name: "Cloudflare",
-        type: "tool",
-        url: cloudflare
+        type: "tool"
     },
     {
         name: "Vercel",
-        type: "tool",
-        url: vercel
+        type: "tool"
     },
     {
-        name: "NodeJS",
-        type: "frameworks",
-        url: nodejs
+        name: "MySQL",
+        type: "tool",
+    },
+    {
+        name: "Mongo DB",
+        type: "tool",
+    },
+    {
+        name: "JavaScript",
+        type: "lang"
+    },
+    {
+        name: "TypeScript",
+        type: "lang",
+    },
+    {
+        name: "CSS3",
+        type: "lang"
+    },
+    {
+        name: "React",
+        type: "framework"
+    },
+    {
+        name: "React Native",
+        type: "framework",
+    },
+    {
+        name: "Flask",
+        type: "framework"
+    },
+    {
+        name: "Git & Github",
+        type: "tool"
+    },
+    {
+        name: "HTML5",
+        type: "lang"
+    },
+    {
+        name: "Python",
+        type: "lang"
+    },
+
+    {
+        name: "Jira",
+        type: "tool"
+    },
+    {
+        name: "Vite",
+        type: "tool"
+    },
+    {
+        name: "Socket.io",
+        type: "framework"
+    },
+    {
+        name: "Cloudflare",
+        type: "tool"
+    },
+    {
+        name: "Node JS",
+        type: "framework"
     },
     {
         name: "Express JS",
-        type: "Back",
-        url: express
+        type: "framework"
     },
     {
         name: "C",
@@ -183,26 +172,31 @@ const technologiesMap = [
         name: "SQL",
         type: "lang",
     },
-    {
-        name: "TypeScript",
-        type: "lang",
-    },
+    
     {
         name: "Ember JS",
-        type: "Framework",
+        type: "framework",
     },
     {
         name: "Java",
         type: "lang",
     },
     {
-        name: "Java",
-        type: "lang",
+        name: "Spring Boot",
+        type: "framework",
     },
     {
-        name: "Java",
+        name: "Postman",
+        type: "tool",
+    },
+    {
+        name: "Insomina",
+        type: "tool",
+    },
+    {
+        name: "Bash",
         type: "lang",
-    }
+    },
 ]
 
 

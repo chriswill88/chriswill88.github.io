@@ -4,7 +4,7 @@ import { createContext, useContext, useState } from "react";
 const AppContext = createContext<any>(null);
 
 const AppContextProvider = ({ children }: any) => {
-    const [appState, setAppState] = useState('intro');
+    const [appState, setAppState] = useState('main');
 
     return <AppContext.Provider value={{appState: appState, setAppState: setAppState}}>
         {children}

@@ -1,4 +1,5 @@
 import './app.css'
+import "./components/figures/figures.css"
 import Home from './components/home/Home'
 
 import { Suspense, useEffect, useMemo, useState } from "react";
@@ -10,11 +11,12 @@ import {
   OutMode,
 } from "@tsparticles/engine";
 import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-import Sidebar, { SideBarPlaceHolder } from './components/sidebar/Sidebar';
 import { AppContextProvider } from './context/AppContext';
 import Skills from './components/skills/Skills';
 import MainWrapper from './components/main/MainWrapper';
 import Experience from './components/experience/Experience';
+import Projects from './components/projects/Projects';
+import Footer from './components/footer/Footer';
 // import { loadFull } from "tsparticals/"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 // import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
@@ -107,7 +109,6 @@ const App = () => {
   if (init) {
     return (
       <Suspense fallback={<div>Loading...</div>}>
-
         <AppContextProvider>
             <div className="app">
               <Particles
@@ -115,29 +116,44 @@ const App = () => {
                 particlesLoaded={particlesLoaded}
                 options={options}
                 className=''
-              />
-              <Sidebar />
-              <SideBarPlaceHolder />
-              {
-                
+              />  
               <MainWrapper>
                 <Home />
                 <Experience />
+                <div className="skill-project-wrapper">
                 <Skills />
-
+                <Projects />
+                </div>
+                <Footer />
               </MainWrapper>
-              }
             </div>
         </AppContextProvider>
       </Suspense>
-
     );
   }
 
   return <>
-    <AppContextProvider>
-      <Sidebar />
-    </AppContextProvider>
+      <Suspense fallback={<div>Loading...</div>}>
+        <AppContextProvider>
+          <div className="app">
+            <Particles
+              id="tsparticles"
+              particlesLoaded={particlesLoaded}
+              options={options}
+              className=''
+            />  
+            <MainWrapper>
+              <Home />
+              <Experience />
+              <div className="skill-project-wrapper">
+              <Skills />
+              <Projects />
+              </div>
+              <Footer />
+            </MainWrapper>
+          </div>
+        </AppContextProvider>
+      </Suspense>
     </>;
 };
 

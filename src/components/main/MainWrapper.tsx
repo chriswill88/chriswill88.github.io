@@ -1,9 +1,7 @@
-import { useAppContext } from "../../context/AppContext";
 
 const MainWrapper = ({ children }: any) => {
-    const { appState } = useAppContext();
 
-    return appState != "intro" && <div id="main">
+    return <div id="main">
         { children }
     </div>
 }

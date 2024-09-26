@@ -1,21 +1,27 @@
-import img from '../../assets/image.png';
+import { useAppContext } from '../../context/AppContext';
+import Stars from '../figures/Stars';
 
 export default function Home() {
+    const { appState } = useAppContext();
+
     return <div className="home">
             <div className="bio see-able">
-                <p>Hello!</p>
+                <p>Hello!  <div className='wave-emoji'>👋</div></p>
                 <p>
-                    I'm Christian Williams, I have about 3 years of full stack experience.
-                    I enjoy working on projects of all sorts, with a vast variety of coding languages and technologies.
+                    I'm Christian Williams, I've been learning coding for about 5 years, with 3 years of full stack experience.
+                    I enjoy working on projects of all sorts, with a variety of coding languages and technologies.
                 </p>
                 <p>
-                    In my free time - I could be working on projects I keep forgetting to push to github, trying board games with friends, trying out new foods, or finding something fun to do.
+                    In my free time - you can find me working on the projects I keep forgetting to push to github, trying new board games with friends, trying out different foods, or finding something fun to get into.
                 </p>
 
-                <p>Get in touch <a href='mailto:christian.williams77@outlook.com'>christian.williams77@outlook.com</a></p>
-                {/* <p>My latest role was at Sony Playstation as a full stack software engineer.</p>
-                <p>I'm open for work!</p> */}
+                <p>I'm open for work!</p>
+                <p>Get in touch 🤝 <a className='mail' href='mailto:christian.williams77@outlook.com'>christian.williams77@outlook.com</a></p>
+                
             </div>
-            {/* <img className="pro-image see-able" src={img} alt="pro-image"/> */}
+            <div className={`title-container ${appState == 'main' && "main"} `}>
+                <Stars />
+
+            </div>      
         </div>
 }

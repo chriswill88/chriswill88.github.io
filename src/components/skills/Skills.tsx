@@ -1,25 +1,40 @@
+import { technologiesMap } from "../../fixture/data";
 
 const getSkills = (subject: string) => {
-    
+    return technologiesMap.filter(({type}) => type == subject)
 }
 
 const Skills = () => {
     return <div className="skills-container">
-        <div className="subtitle see-able">
-            <h2>Skills</h2>
-        </div>
+
 
         <div className="skills see-able">
-            <div id="general" className="column">
-                <div ><p className="tech-title">General</p></div>
+            <div className="subtitle see-able">
+                <p>SKILLS</p>
             </div>
-            <div className="column">
-                <div><p className="tech-title">Frontend</p></div>
-                <div><p className="tech-title">Backend</p></div>
+            <div>
+                <p className="tech-title">LANGUAGES</p>
+                {
+                    getSkills("lang").map((obj, ind) => <p key={ind} className="tech-name">{obj.name}</p>)
+                }
             </div>
-            <div className="column">
-                <div><p className="tech-title">AI/ML</p></div>
-                <div><p className="tech-title">Creative/Design</p></div>
+
+            <div><p className="tech-title">FRAMEWORKS</p>
+                {
+                    getSkills("framework").map((obj, ind) => <p key={ind} className="tech-name">{obj.name}</p>)
+                }
+            </div>
+            <div>
+                <p className="tech-title">TOOLS</p>
+                {
+                    getSkills("tool").map((obj, ind) => <p key={ind} className="tech-name">{obj.name}</p>)
+                }
+            </div>
+            <div>
+                <p className="tech-title">CREATIVE</p>
+                {
+                    getSkills("create").map((obj, ind) => <p key={ind} className="tech-name">{obj.name}</p>)
+                }
             </div>
         </div>
 

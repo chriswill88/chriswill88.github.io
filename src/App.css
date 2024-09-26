@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 #root::-webkit-scrollbar {
   /*Chrome, Safari, Edge*/
   display: none;
@@ -55,6 +56,12 @@
   scrollbar-width: none;
   /*IE10+*/
   -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
 }
 
 .app {
@@ -96,10 +103,20 @@
   }
 }
 
+.date {
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.job-desc {
+  font-size: 15px;
+  font-weight: 300;
+
+}
 .playstation-svg {
   position: absolute;
   opacity: .3;
-  mix-blend-mode:screen;
+  mix-blend-mode: screen;
   height: 100vh;
   z-index: -1;
   right: -600px;
@@ -108,7 +125,6 @@
 #app-link {
   display: block;
   width: max-content;
-  font-weight: bold;
   color: white;
 }
 
@@ -116,11 +132,14 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 13px;
+  font-weight: 200;
   max-width: 900px;
   margin-top: 10px;
 }
 
 .tech-list p {
+  margin: 0;
+  padding: 0;
   width: max-content;
   margin-right: 9px;
 }
@@ -141,7 +160,7 @@
   width: 90%;
   height: 60%;
   font-size: 35px;
-  font-weight: lighter;
+  font-weight: 200;
 
   display: flex; 
   flex-direction: column;
@@ -228,6 +247,7 @@
 .subtitle {
   width: 100px;
   height: 50px;
+  font-weight: 600;
   border-radius: 40px;
   margin-bottom: 50px;
 }
@@ -244,7 +264,7 @@
 }
 
 .tech-name {
-  font-weight: lighter;
+  font-weight: 200;
   margin-right: 10px;
 }
 
@@ -331,7 +351,7 @@
 }
 
 #desc {
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 

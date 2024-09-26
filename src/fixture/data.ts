@@ -39,15 +39,15 @@ const projectsData: project[] = [
         url: "https://chriswilliams.tech",
         github: "https://github.com/chriswill88/chriswill88.github.io",
         description: "Christian Williams Portfolio website used to showcase skills and projects.",
-        techNames: ["GSAP", "Vite", "Github Pages", "HTML5", "JavaScript", "NPM", "React", "Cloudflare", "NodeJS", "CSS3" ],
+        techNames: ["React", "TypeScript", "GSAP", "NodeJS", "Vite", "Github Pages", "HTML5", "JavaScript", "NPM", "Cloudflare", "CSS3" ],
         pictures: []
     },
     {
         name: "RocketRiders",
         url: "https://rocket-riders-git-master-chriswill88.vercel.app/",
         github: "https://github.com/chriswill88/RocketRiders",
-        description: "This game was created using Phaser 3, a javascript game making framework.",
-        techNames: ["AWS", "React", "JavaScript", "Flask", "Nginx", "Phaser3", "NodeJS", "After Effects", "Babel", "CSS3", "HTML5", "Lottie", "NPM", "Parcel", "Python", "Slack", "Trello", "Vercel"],
+        description: "This game was created using Phaser 3, a javascript game making framework. You can only play the game on PC!",
+        techNames: ["AWS", "React", "Vercel", "JavaScript", "Flask", "Phaser3", "NodeJS", "After Effects", "Babel", "CSS3", "HTML5", "Lottie", "NPM", "Parcel", "Python", "Slack", "Trello", "Nginx"],
         pictures: []
     },
     {
@@ -60,8 +60,8 @@ const projectsData: project[] = [
     },
     {
         name: "Nature Fresh Bins Website",
-        url: null,
-        github: null,
+        url: "https://v0-bins-website.vercel.app/",
+        github: "https://github.com/chriswill88/V0-bins-website",
         description: "Buisness page for trash bin cleaning service",
         techNames: ["Vercel", "V0", "Next JS", "Tailwind CSS", "NPM", "React", "NodeJS", "CSS3" ],
         pictures: []
@@ -196,6 +196,10 @@ const technologiesMap: technology[] = [
     {
         name: "Bash",
         type: "lang",
+    },
+    {
+        name: "GSAP",
+        type: "create",
     },
 ]
 

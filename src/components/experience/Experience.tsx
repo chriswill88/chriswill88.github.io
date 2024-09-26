@@ -1,7 +1,37 @@
 import svg from "../../assets/PlayStation_logo.svg"
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Experience = () => {
-    return <div className="exp-container">
+    const container = useRef(null);
+    useGSAP(
+        () => {
+            gsap.from('.playstation-svg', {
+                scrollTrigger: {
+                    trigger: '.exp-container',
+                    start: 'top top', // when the top of the trigger hits the top of the viewport
+                    end: '+=1000', // end after scrolling 500px beyond the start
+                    scrub: true,
+                },
+                
+                x: 1000 }); // <-- automatically reverted
+            gsap.from('.exp', {
+                scrollTrigger: {
+                    trigger: '.exp-container',
+                    start: 'top top', // when the top of the trigger hits the top of the viewport
+                    end: '+=900', // end after scrolling 500px beyond the start
+                    scrub: true,
+                },
+                x: -1000 }); // <-- automatically reverted
+        },
+        { scope: container }
+    );
+
+    return <div ref={container} className="exp-container">
         <div className="exp">
             <div className="inner-info">
                 <h3>Full Stack Software Engineer - Sony Interactive Entertainment</h3>

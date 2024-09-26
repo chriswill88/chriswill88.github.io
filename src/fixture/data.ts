@@ -39,7 +39,7 @@ const projectsData: project[] = [
         url: "https://chriswilliams.tech",
         github: "https://github.com/chriswill88/chriswill88.github.io",
         description: "Christian Williams Portfolio website used to showcase skills and projects.",
-        techNames: ["Vite", "Github Pages", "HTML5", "JavaScript", "NPM", "React", "Cloudflare", "NodeJS", "CSS3" ],
+        techNames: ["GSAP", "Vite", "Github Pages", "HTML5", "JavaScript", "NPM", "React", "Cloudflare", "NodeJS", "CSS3" ],
         pictures: []
     },
     {

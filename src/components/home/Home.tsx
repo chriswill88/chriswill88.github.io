@@ -6,7 +6,7 @@ export default function Home() {
 
     return <div className="home">
             <div className="bio see-able">
-                <p>Hello!  <div className='wave-emoji'>👋</div></p>
+                <p>Hello!  <span className='wave-emoji'>👋</span></p>
                 <p>
                     I'm Christian Williams, I've been learning coding for about 5 years, with 3 years of full stack experience.
                     I enjoy working on projects of all sorts, with a variety of coding languages and technologies.

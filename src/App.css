@@ -85,9 +85,9 @@
   display: flex;
   align-items: center;
 
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #ps-link {
@@ -111,8 +111,8 @@
 .job-desc {
   font-size: 15px;
   font-weight: 300;
-
 }
+
 .playstation-svg {
   position: absolute;
   opacity: .3;
@@ -277,6 +277,7 @@
   align-items: space-between;
 }
 
+/* found fix */
 .hide-scrollbar {
   /*FireFox*/
   scrollbar-width: none;

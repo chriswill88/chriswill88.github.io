@@ -12,20 +12,21 @@ const Footer = () => {
         () => {
             const scrollConfig = {
                 trigger: ".statement",
-                start: "-=1330",
+                start: "-=200",
                 end:  '+=30',
-                scrub: true
+                scrub: true,
+                markers: true
             }
 
             const scrollSurfConfig = {
-                trigger: ".footer",
+                trigger: container.current,
                 toggleActions: "restart none none none",
             }
 
             gsap.from('.statement, .links', {
                 scrollTrigger: scrollConfig,
                 duration: 3,
-                opacity: 0, y: 100, ease: "power4.out" }); 
+                opacity: 0, x: 100, ease: "power4.out" }); 
         
             gsap.from(".gnarly", {
                 scrollTrigger: scrollSurfConfig,
@@ -38,7 +39,7 @@ const Footer = () => {
         { scope: container }
     );
 
-    return <div ref={container} className='footer'>
+    return <div className='footer'>
         <p className='statement'>Designed & Developed by Christian Williams <span className='gnarly'>🤙</span> 2024</p>
         
         <div className="links">

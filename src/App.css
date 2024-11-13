@@ -45,9 +45,9 @@
 }
 
 #root {
-  width: 100vw;
   background-color: black;
 
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,16 +66,15 @@
 }
 
 .app {
-  width: 100vw;
   height: 100%;
   overflow: hidden;
 }
 
 #main {
-  min-height: 100vh;
   height: 100%;
+  min-height: 100vh;
 
-  padding: 0px 200px 30px 200px;
+  padding: 0px 200px 0px 200px;
   background-color: #00000049;
   backdrop-filter: blur(200px);
   -webkit-backdrop-filter: blur(200px);
@@ -94,7 +93,6 @@
 #ps-link {
   color: white;
 }
-
 
 .exp {
   width: 100%;
@@ -439,6 +437,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .gnarly {

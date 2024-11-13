@@ -5,7 +5,7 @@ export default function Home() {
     const { appState } = useAppContext();
 
     return <div className="home">
-            <div className="bio see-able">
+            <div className="bio">
                 <p>Hello!  <span className='wave-emoji'>👋</span></p>
                 <p>
                     I'm Christian Williams, I've been learning coding for about 5 years, with 3 years of full stack experience.

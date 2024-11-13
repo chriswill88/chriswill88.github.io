@@ -14,8 +14,7 @@ const Footer = () => {
                 trigger: ".statement",
                 start: "-=200",
                 end:  '+=30',
-                scrub: true,
-                markers: true
+                scrub: true
             }
 
             const scrollSurfConfig = {

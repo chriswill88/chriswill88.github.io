@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Footer = () => {
+    // fix next
     const container = useRef(null);
     useGSAP(
         () => {
